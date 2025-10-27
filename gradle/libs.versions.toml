@@ -1,0 +1,88 @@
+[versions]
+#region Project & Plugins
+agp = "8.13.0"
+kotlin = "1.9.23"
+googleGmsGoogleServices = "4.4.2"
+ksp = "1.9.23-1.0.20"
+#endregion
+
+#region AndroidX
+appcompat = "1.7.0"
+coreKtx = "1.13.1"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+material = "1.12.0"
+#endregion
+
+#region Coroutines
+coroutines = "1.8.1"
+coroutinesPlayServices = "1.8.1" # Matches the main coroutines version
+#endregion
+
+#region Firebase
+firebaseBom = "33.1.1" # Firebase Bill of Materials
+firebaseUi = "8.0.2"
+playServicesAuth = "21.2.0"
+#endregion
+
+#region UI
+glide = "4.16.0"
+#endregion
+
+#region Testing
+junit = "4.13.2"
+androidxJunit = "1.2.1"
+espressoCore = "3.6.1"
+coreTesting = "2.2.0"
+activityVersion = "1.11.0"
+googleid = "1.1.1"
+firebaseFirestore = "26.0.2"
+#endregion
+
+[libraries]
+#region AndroidX & UI
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+#endregion
+
+#region Coroutines
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutinesPlayServices" }
+#endregion
+
+#region Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" } # Version managed by bom
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore-ktx" } # Version managed by bom
+firebase-ui-firestore = { group = "com.firebaseui", name = "firebase-ui-firestore", version.ref = "firebaseUi" }
+play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
+#endregion
+
+#region Image Loading
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-ksp = { group = "com.github.bumptech.glide", name = "ksp", version.ref = "glide" }
+#endregion
+
+#region Testing
+
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-arch-core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "coreTesting" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activityVersion" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+google-firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+#endregion
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
